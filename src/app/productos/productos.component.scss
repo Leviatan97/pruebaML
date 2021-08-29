@@ -1,0 +1,67 @@
+body{
+    height: 100% !important;
+    background-color: #eeeeee;
+}
+footer{
+   background-color: #eeeeee;    
+}
+
+.breadcrumb-item+.breadcrumb-item::before{
+    float: left;
+    padding-right: .5rem;
+    color: #999999;
+    content: var(--bs-breadcrumb-divider, ">");
+    font-size: 14px;
+}
+
+.valor{
+    font-size: 24px;
+    color: #333333;
+}
+
+.pValor{
+    float: left;
+    margin-right: 5%;
+}
+
+.descripcion{
+    font-size: 18px;
+    color: #333333;
+}
+
+.empresa {
+    font-size: 12px;
+    color: #666666;
+    text-align: right;
+}
+
+a{
+    color: #afafaf;
+    text-decoration: none !important;
+}
+
+.imgProducto{
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+}
+
+@media (max-width: 500px) {
+    .empresa {
+        font-size: 12px;
+        color: #666666;
+        text-align: left;
+    }
+
+    .valor{
+        margin-top: 10px;
+    }
+
+    .imgProducto{
+        text-align: center;
+    }
+}
+
+.item {
+    cursor: pointer;
+}

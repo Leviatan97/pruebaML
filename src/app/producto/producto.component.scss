@@ -1,0 +1,137 @@
+body{
+    height: 100% !important;
+    background-color: #eeeeee;
+}
+footer{
+   background-color: #eeeeee;    
+}
+
+.breadcrumb-item+.breadcrumb-item::before{
+    float: left;
+    padding-right: .5rem;
+    color: #999999;
+    content: var(--bs-breadcrumb-divider, ">");
+    font-size: 14px;
+}
+
+.Titulo{
+    font-size: 14px;
+    color: #333333;
+    margin-top: 32px;
+}
+
+p{
+    margin-bottom: 0px;
+    width: 130%;
+}
+
+.pValor{
+    float: left;
+    margin-right: 5%;
+}
+
+.descripcion{
+    font-size: 16px;
+    margin-left: 32px;
+    color: #333333;
+}
+
+.Titulo2{
+    font-size: 24px;
+    margin-top: 16px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.Titulo3{
+    font-size: 28px;
+    margin-left: 32px;
+    margin-bottom: 32px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.Valor{
+    font-size: 46px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    color: #333333;
+    font-weight: bold;
+}
+.empresa {
+    font-size: 12px;
+    color: #666666;
+    text-align: right;
+}
+
+a{
+    color: #afafaf;
+    text-decoration: none !important;
+}
+
+.imgProducto{
+    width: 680px;
+    border-radius: 4px;
+}
+
+.btn{
+    width: 140%;
+}
+
+.separacion{
+    padding-left: 50px;
+}
+
+@media (max-width: 1200px) {
+    .imgProducto{
+        width: 500px;
+        border-radius: 4px;
+    }
+    .separacion{
+        padding-left: 40px;
+    }
+
+    p{
+        margin-bottom: 0px;
+        width: 170%;
+    }
+}
+
+@media (max-width: 990px) {
+    .imgProducto{
+        width: 400px;
+        border-radius: 4px;
+    }
+    .separacion{
+        padding-left: 40px;
+    }
+
+    p{
+        margin-bottom: 0px;
+        width: 370%;
+    }
+}
+
+@media (max-width: 500px) {
+    .empresa {
+        font-size: 12px;
+        color: #666666;
+        text-align: left;
+    }
+
+    .valor{
+        margin-top: 10px;
+    }
+
+    .imgProducto{
+        text-align: center;
+        width: 300px;
+    }
+    p{
+        margin-bottom: 0px;
+        width: 90%;
+    }
+    .btn{
+        width: 90%;
+    }
+}

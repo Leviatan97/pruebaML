@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductosService } from './services/productos.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pruebaML';
+  
+
+  constructor(private productoService: ProductosService) {}
+
+  buscarProducto() {
+
+  }
+
+  getProductoService(id: string) {
+
+  }
 }

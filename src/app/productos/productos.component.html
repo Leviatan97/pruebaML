@@ -1,0 +1,65 @@
+<body>
+    <div class="container justify-content-center mb-1">
+      <div class="row">
+        <div class="col-md-4 mt-2">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item labelBead"><a href="#">Inicio</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Productos</li>
+
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <div class="row card pb-3">
+        <div class="col-12 card-body" *ngIf="listaProductos.length > 0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item item" (click)="getProducto(producto.id)" *ngFor="let producto of listaProductos | paginate: { itemsPerPage: 4, currentPage: p }">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-3"><img class="imgProducto" [src]="producto.picture" alt=""></div>
+                  <div class="col-sm-5 col-md-9">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-5 col-lg-6 valor">
+                        <p class="pValor">{{producto.price.amount | currency}}</p>
+                        <img src="assets/ic_shipping.png" alt="" *ngIf="producto.free_shipping">
+                      </div>
+                      <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0 empresa"><p>{{producto.state_name}}</p></div>
+                    </div>
+                    <div class="row mt-2">
+                      <div class="col-sm-6 col-md-5 col-lg-6 descripcion">{{producto.tittle}}</div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 card-body" *ngIf="listaProductos.length == 0">
+          <h5 class="card-title">No hay publicaciones que coincidan con tu búsqueda.</h5>
+          <ul>
+              <li>
+                    Revisa la ortografía de la palabra.
+              </li>
+              <li>
+                    Utiliza palabras más genéricas o menos palabras.
+              </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="row mt-3" *ngIf="listaProductos.length > 0">
+        <pagination-controls 
+            (pageChange)="p = $event"
+            previousLabel="Anterior"
+            nextLabel="Siguiente"
+            class="custom-pagination text-center"
+        >
+        </pagination-controls>
+      </div>
+
+      
+    </div>
+    
+    
+  </body>
